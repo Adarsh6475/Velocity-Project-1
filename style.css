@@ -1,0 +1,157 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: sans-serif;
+            background: rgba(7, 7, 7, 0.6);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal {
+            width: 90%;
+            max-width: 800px;
+            background: #fff5e8;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            position: relative;
+            animation: fadeIn 0.4s ease;
+        }
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 22px;
+            cursor: pointer;
+            color: #555;
+        }
+        .modal h2 {
+            text-align: center;
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin-bottom: 25px;
+        }
+        .search-box input {
+            border: none;
+            outline: none;
+            flex: 1;
+            font-size: 16px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .feature-item img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 5px;
+        }
+        .feature-item p {
+            font-size: 12px;
+            color: #444;
+        }
+        .top-cities h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 15px;
+            justify-items: center;
+        }
+        .city {
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .city img {
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            border-radius: 50%;
+            padding: 10px;
+            border: 1px solid #eee;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+        }
+        .city:hover img {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+            border: 2px solid #000;
+        }
+        .city p {
+            font-size: 13px;
+            margin-top: 6px;
+        }
+        .other-cities {
+            margin-top: 25px;
+            display: none;
+        }
+        .other-cities h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .other-cities ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            text-align: center;
+        }
+        .other-cities li {
+            font-size: 14px;
+            color: #444;
+            background: none;
+            border: none;
+            padding: 8px;
+            border-radius: 20px;
+            transition: background 0.2s ease;
+        }
+        .other-cities li:hover {
+            background: #ffe5c4;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+          .cities-grid {
+        grid-template-columns: repeat(3, 1fr);
+             }
+         }
+        @media (max-width: 768px) {
+          .other-cities ul {
+             grid-template-columns: repeat(1, 1fr);
+          }
+        }
+
+        .show-all {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .show-all button {
+            background: none;
+            border: none;
+            color: #555;
+            text-decoration: underline;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .show-all button:hover {
+            color: #000;
+        }
+    
